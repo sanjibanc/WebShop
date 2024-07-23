@@ -35,7 +35,7 @@ class WebAgentSiteEnv(gym.Env):
         self.kwargs = kwargs
 
         # Create a browser driver to simulate the WebShop site
-        service = Service(join(dirname(abspath(__file__)), 'chromedriver'))
+        service = Service()
         options = Options()
         if 'render' not in kwargs or not kwargs['render']:
             options.add_argument("--headless")  # don't show browser
